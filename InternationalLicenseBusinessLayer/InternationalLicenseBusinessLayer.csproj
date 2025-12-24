@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F2AAF2AB-D84A-4A82-999A-BAB1653B8EC6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>InternationalLicenseBusinessLayer</RootNamespace>
+    <AssemblyName>InternationalLicenseBusinessLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="InternationalLicense.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ApplicationBusinessLayer\ApplicationBusinessLayer.csproj">
+      <Project>{1fefd94c-c19d-4456-90ec-48f68eecbc8a}</Project>
+      <Name>ApplicationBusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DriverBusinessLayer\DriverBusinessLayer.csproj">
+      <Project>{35f481b6-fbd2-4933-a930-9ec64a5ed09a}</Project>
+      <Name>DriverBusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\InternationalLicenseDataAccessLayer\InternationalLicenseDataAccessLayer.csproj">
+      <Project>{476960f1-ac7e-4c43-a95a-ad0e5360ce47}</Project>
+      <Name>InternationalLicenseDataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LicenseBusinessLayer\LicenseBusinessLayer.csproj">
+      <Project>{d2d4ac60-4fa4-4fa2-acdd-7c14a83aafc3}</Project>
+      <Name>LicenseBusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LicenseClasseBusinessLayer\LicenseClassBusinessLayer.csproj">
+      <Project>{85e934f6-fbb3-4d8a-b5d3-c4092f6ea185}</Project>
+      <Name>LicenseClassBusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\util\Utilities.csproj">
+      <Project>{778fedec-c11f-44be-ae45-8c71ed19017c}</Project>
+      <Name>Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
