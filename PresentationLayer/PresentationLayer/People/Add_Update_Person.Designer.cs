@@ -62,7 +62,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.titleBar = new PresentationLayer.TitleBar();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -316,7 +315,6 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.linkLabel1);
             this.groupBox3.Controls.Add(this.lklChangImage);
             this.groupBox3.Controls.Add(this.ptbPersonImage);
             this.groupBox3.Location = new System.Drawing.Point(34, 459);
@@ -444,19 +442,6 @@
             this.titleBar.TabIndex = 0;
             this.titleBar.TitleBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(153)))), ((int)(((byte)(0)))));
-            this.linkLabel1.Location = new System.Drawing.Point(173, 14);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(82, 24);
-            this.linkLabel1.TabIndex = 2;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Remove";
-            // 
             // Add_Update_Person
             // 
             this.AcceptButton = this.btnSave;
@@ -519,6 +504,5 @@
         private System.Windows.Forms.PictureBox ptbPersonImage;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.ErrorProvider errorProvider;
-        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

@@ -49,8 +49,6 @@ namespace PresentationLayer
 
 
 
-
-
         // Main Form :
 
         public MainForm(User user)
@@ -448,6 +446,7 @@ namespace PresentationLayer
                 lblDetainedLicsenses.Text = DetainedLicense.NumberOfDetainedLicenses.ToString();
 
                 DataRowCollection dataRow = ApplicationBusinessLayer.Application.GetNumberOfApplications().Rows;
+                
                 int numberOfApplications = 0;
                 
                 foreach (DataRow row in dataRow)
@@ -457,8 +456,8 @@ namespace PresentationLayer
 
                 lbllblNumberOfApplications.Text = numberOfApplications.ToString();
                 lblNumberOfLocalDrivingLicenseApplications.Text = dataRow[0][0].ToString();
-                lblNumberOFReleaseDetainedLicsenseApplications.Text = dataRow[4][0].ToString();
-                lblNumberOfInternationalLicenseApplications.Text = dataRow[5][0].ToString();
+                lblNumberOFReleaseDetainedLicsenseApplications.Text = dataRow[3][0].ToString();
+                lblNumberOfInternationalLicenseApplications.Text = dataRow[4][0].ToString();
                 
             }
             catch (Exception ex)

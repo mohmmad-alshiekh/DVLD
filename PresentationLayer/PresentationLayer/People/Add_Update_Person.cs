@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Drawing;
+using System.Reflection;
 using System.Windows.Forms;
 using PersonBusinessLayer;
 using Utilities;
@@ -160,7 +161,7 @@ namespace PresentationLayer
                     else
                         MessageBox.Show($"Save operation failed.\nThe person {_PersonID} does not exist ", "Save Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                catch(Exception ex) 
+                catch 
                 {
                     MessageBox.Show($"Save operation failed.", "Save Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

@@ -88,7 +88,7 @@ namespace TestAppointmentDataAccessLayer
                 connection.Open();
                 object obj = command.ExecuteScalar();
 
-                return obj != null && obj.ToString() != "1";
+                return obj == null || obj.ToString() != "1";
             }
             catch (Exception ex)
             {
